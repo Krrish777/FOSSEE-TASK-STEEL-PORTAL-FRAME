@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QLineEdit, QGridLayout, QLabel, QVBoxLayout, QSizePolicy
+from PySide6.QtWidgets import QWidget, QLineEdit, QGridLayout, QLabel, QVBoxLayout, QSizePolicy
 
 class Widget(QWidget):
     def __init__(self):

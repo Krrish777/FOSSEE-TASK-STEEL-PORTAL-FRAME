@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QPushButton, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QApplication, QPushButton, QVBoxLayout, QWidget
 from geometry import create_i_section, create_portal_frame
 from file_operations import save_to_step
 from OCC.Display.SimpleGui import init_display
