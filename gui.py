@@ -1,14 +1,20 @@
 from PySide6.QtWidgets import QWidget, QLineEdit, QGridLayout, QLabel, QVBoxLayout, QSizePolicy
 
 class Widget(QWidget):
+    """
+    A QWidget subclass that creates a GUI for Steel Frame Design.
+    This widget contains multiple QLineEdit fields for inputting various parameters
+    related to the design of a steel frame.
+    """
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Steel Frame Design")
 
+        # Main layout for the widget
         layout = QVBoxLayout()
         grid_layout = QGridLayout()
 
-        # Create the QLineEdit fields
+        # Create the QLineEdit fields for various parameters
         self.column_height = QLineEdit()
         self.column_length = QLineEdit()
         self.column_width = QLineEdit()

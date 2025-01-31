@@ -6,6 +6,10 @@ from gui import Widget
 import sys
 
 class MainApp(QWidget):
+    """
+    Main application class for the Steel Frame Design Application.
+    This class sets up the GUI and handles the generation and display of the steel frame.
+    """
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Steel Frame Design Application")
@@ -14,9 +18,11 @@ class MainApp(QWidget):
         # Main layout
         main_layout = QVBoxLayout()
 
+        # Input widget for user inputs
         self.input_widget = Widget()
         main_layout.addWidget(self.input_widget)
         
+        # Button to generate and display the frame
         self.generate_button = QPushButton("Generate and Display Frame")
         self.generate_button.clicked.connect(self.generate_frame)
         main_layout.addWidget(self.generate_button)
@@ -24,6 +30,10 @@ class MainApp(QWidget):
         self.setLayout(main_layout)
 
     def generate_frame(self):
+        """
+        Generates the steel frame based on user inputs and displays it.
+        Also saves the frame to a STEP file.
+        """
         try:
             # Read values from the GUI
             column_height = float(self.input_widget.column_height.text())
@@ -70,8 +80,8 @@ class MainApp(QWidget):
         except ValueError as e:
             print(f"Invalid input: {e}")
 
-
 if __name__ == "__main__":
+    # Entry point of the application
     app = QApplication(sys.argv)
     main_window = MainApp()
     main_window.show()
